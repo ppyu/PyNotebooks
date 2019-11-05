@@ -91,9 +91,8 @@
 如果推送失败，则因为远程分支比你的本地更新，需要先用`git pull`试图合并；
 如果合并有冲突，则解决冲突，并在本地提交；
 没有冲突或者解决掉冲突后，再用`git push origin branch-name`推送就能成功！
-
-\*this text is surrounded by literal asterisks\*
-
-如果`git pull`提示 \*no tracking information\*，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream branch-name origin/branch-name`。
+如果`git pull`提示 *“no tracking information”*，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream branch-name origin/branch-name`。
 这就是多人协作的工作模式，一旦熟悉了，就非常简单。
 
+上述建立分支链接的命令已经过时，使用下面的命令建立本地与远程仓库的链接。
+`git branch --set-upstream-to=origin/rented_branch_name local_branch_name`
